@@ -1,6 +1,7 @@
 export default function updateUniqueItems(map) {
-  if (!map instanceof Map) {
-    throw new Error("Cannot process");
+  // eslint-diable-next-line no-restricted-syntax
+  if (!(map instanceof Map)) {
+    throw new Error('Cannot process');
   }
 
   for (const [key, value] of map) {
