@@ -1,13 +1,10 @@
 import { uploadPhoto, createUser } from './utils';
 
 export default function handleProfileSignup() {
-  const promises = [uploadPhoto(), createUser()];
-
-  Promise.all(promises).then((responses) => {
-    console.log(`${responses[0].body} ${responses[1].firstName} ${responses[1].lastName}`);
-  }).catch(() => {
-    console.log('Signup system offline');
-  });
-
-  return promises;
+  return Promise
+    .all([uploadPhoto(), createUser()])
+    .then((res) => {
+      console.log(`${res[0].body} ${res[1].firstName} ${res[1].lastName}`);
+    })
+    .catch(() => console.log('Signup system offline'));
 }
