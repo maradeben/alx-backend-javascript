@@ -1,4 +1,7 @@
-// display a message to STDOUT
+/**
+ * display a message to STDOUT
+ * @param (String) message to display
+ */
 const displayMessage = (message) => {
   console.log(message);
 };
