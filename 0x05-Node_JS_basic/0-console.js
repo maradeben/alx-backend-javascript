@@ -1,7 +1,6 @@
 // display a message to STDOUT
-module.exports = displayMessage;
-
-
-function displayMessage(message) {
+const displayMessage = (message) => {
   console.log(message);
-}
+};
+
+module.exports = displayMessage;
